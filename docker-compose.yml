@@ -1,0 +1,45 @@
+version: '3.7'
+services:
+  postgres:
+    image: postgres:9.6.14
+    environment:
+      - POSTGRES_DB=keycloak
+      - POSTGRES_USER=keycloak
+      - POSTGRES_PASSWORD=password 
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U keycloak"]
+      interval: 10s
+      timeout: 5s
+      retries: 5  
+  keycloak:
+    image: jboss/keycloak:6.0.1
+    environment:
+      #- KEYCLOAK_HOSTNAME=keycloak
+      - KEYCLOAK_USER=admin
+      - KEYCLOAK_PASSWORD=password
+      - DB_VENDOR=postgres
+      - DB_ADDR=postgres
+      - DB_DATABASE=keycloak # same as default 
+      - DB_USER=keycloak
+      - DB_PASSWORD=password
+      - DB_SCHEMA=public # same as default 
+      - KEYCLOAK_IMPORT=/tmp/realm-export.json
+    ports:
+     - 8080:8080 
+    volumes:
+     - ./realm-export.json:/tmp/realm-export.json 
+    healthcheck:
+      test: curl -f http://localhost:8080/auth/realms/master || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 10
+      start_period: 1m
+    depends_on:
+      - postgres 
+  
+  shibboleth:
+    build: 
+      context: ./shibboleth-sp
+      dockerfile: Dockerfile
+    ports:
+      - 8081:80

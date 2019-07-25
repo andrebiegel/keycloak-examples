@@ -41,7 +41,7 @@
             (Set discoveryProtocol to "WAYF" for legacy Shibboleth WAYF support.)
             You can also override entityID on /Login query string, or in RequestMap/htaccess.
             -->
-            <SSO entityID="http://localhost:8080/auth/realms/master">
+            <SSO entityID="http://keycloak.localhost:8080/auth/realms/master">
               SAML2 SAML1
             </SSO>
 

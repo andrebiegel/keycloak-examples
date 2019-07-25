@@ -1,7 +1,9 @@
 @startuml
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
-
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
+autonumber
+actor User
+title SAML POST Binding
+User -> “Shibboleth-SP“ : Accessing /secured
+“Shibboleth-SP“ -> “Keycloak-IDP“ : To control
+“Keycloak-IDP“ -> “Shibboleth-SP“ : To entity
+“Shibboleth-SP“ -> User : To database
 @enduml

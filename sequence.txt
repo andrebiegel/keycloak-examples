@@ -3,6 +3,10 @@ autonumber
 actor User
 title SAML POST Binding
 User -> “Shibboleth-SP“ : Accessing /secured
+“Shibboleth-SP“ -> User : Respond with an XHTML form
+User -> "Keycloak-IDP“ : Request the SSO Service at the IdP
+“Keycloak-IDP“ -> User : Respond with an XHTML form
+User -> “Shibboleth-SP“ : Request the Assertion Consumer Service at the SP
 “Shibboleth-SP“ -> “Keycloak-IDP“ : To control
 “Keycloak-IDP“ -> “Shibboleth-SP“ : To entity
 “Shibboleth-SP“ -> User : To database

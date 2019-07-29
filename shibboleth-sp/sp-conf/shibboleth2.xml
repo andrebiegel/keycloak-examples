@@ -20,7 +20,7 @@
     -->
 
     <!-- The ApplicationDefaults element is where most of Shibboleth's SAML bits are defined. -->
-    <ApplicationDefaults entityID="shibboleth-sp"
+    <ApplicationDefaults entityID="shibboleth-sp" signing="true" encryption="false"
                          REMOTE_USER="eppn uid persistent-id targeted-id">
 
         <!--
@@ -41,7 +41,7 @@
             (Set discoveryProtocol to "WAYF" for legacy Shibboleth WAYF support.)
             You can also override entityID on /Login query string, or in RequestMap/htaccess.
             -->
-            <SSO entityID="http://keycloak.localhost:8080/auth/realms/master">
+            <SSO entityID="http://keycloak.localhost:8080/auth/realms/shibboleth-realm">
               SAML2 SAML1
             </SSO>
 
@@ -100,7 +100,7 @@
         <AttributeFilter type="XML" validate="true" path="attribute-policy.xml"/>
 
         <!-- Simple file-based resolver for using a single keypair. -->
-        <CredentialResolver type="File" certificate="keystore.p12"/>
+        <CredentialResolver type="File" certificate="certificate.pem" key="sp.key"/>
 
         <!--
         The default settings can be overridden by creating ApplicationOverride elements (see

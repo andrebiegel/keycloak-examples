@@ -18,36 +18,36 @@
 
 <EntitiesDescriptor Name="urn:keycloak" xmlns="urn:oasis:names:tc:SAML:2.0:metadata"
 					xmlns:dsig="http://www.w3.org/2000/09/xmldsig#">
-	<EntityDescriptor entityID="http://localhost:8080/auth/realms/master">
+	<EntityDescriptor entityID="http://keycloak.localhost:8080/auth/realms/shibboleth-realm">
 		<IDPSSODescriptor WantAuthnRequestsSigned="true"
 			protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
                         <KeyDescriptor use="signing">
                           <dsig:KeyInfo>
-                            <dsig:KeyName>fzlc46nH5kR-gk3Cr4sES8h3ZsvOaqYqL0eC0RoDPPE</dsig:KeyName>
+                            <dsig:KeyName>LWAvIigvsFC4yg0JNspi_yuZGTOsgPqvL1ACV8aNZLI</dsig:KeyName>
                             <dsig:X509Data>
-                              <dsig:X509Certificate>MIICmzCCAYMCBgFsEDsC2DANBgkqhkiG9w0BAQsFADARMQ8wDQYDVQQDDAZtYXN0ZXIwHhcNMTkwNzIwMTYzMTM4WhcNMjkwNzIwMTYzMzE4WjARMQ8wDQYDVQQDDAZtYXN0ZXIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCQts016j6jdo3LQLpCTh/HrFBkfgcxH4AAruj6rsl3HOP9xnsUSNkkSF2m9rji1OE9GLw9cmnHc/si0+va4uBx83nIAZERftO9h6IlG0Ob7lV0NpC+HKwB/unkbbc0DQKILpVJFoVfVjiapXfd8IW90HVc4I5nPMSWkfhfZkdvXCsvzucUrh/eXbqS3sFb3aG2oyieGy7XNtlvZK6PqRG4gjbdVQlERiEX209cTV56ccl44SPvmUcQTCf0k7UcpejQi6nV45x2FdkH/pGK3DcYXizv/SfOG2ftjlSOlUuFTP0uCCr4viHWAIhKCPR4fbRtmSO1O5HYJzudJ/t0m48VAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAHUAHGHbIN96aplj2pUXsx4zgZYPcI9YZK5WniyVyfIgFPj7+iNrwghpD62DShNJJO0XFeOS6Lq9BhkZgHMDdObfHt6+IF82toJ23lgMFnE8wHWafCC5WYrqhhkCCDGhL7K1DVACyjZh5pRI/NoEE/YqbiSgTlR4pzLQIMOLVq3Oj+LKkZ0El+PiyQxHPTrUNokY8tNrnOi+xmc5xG5feLaofNsPje37qI1lv2aZGY+Uoqm/0L9sMZTKIkEK87ZoYLCm0YstEfWVPgRSun9q1zYmdgEncupCBX2jU6VrCHDxAseB64u6kE60IntsiseSaATfhktHrXwSNYOYwUh1+kw=</dsig:X509Certificate>
+                              <dsig:X509Certificate>MIICrzCCAZcCBgFsNL1o/DANBgkqhkiG9w0BAQsFADAbMRkwFwYDVQQDDBBzaGliYm9sZXRoLXJlYWxtMB4XDTE5MDcyNzE4NDAyNFoXDTI5MDcyNzE4NDIwNFowGzEZMBcGA1UEAwwQc2hpYmJvbGV0aC1yZWFsbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALJGnLvrCptR/OK6bk2lVBQlDgYjL9t494of4Ejkpg5bNXjYaS2btskSdX+n8DqcuqvBWSabG36oSE9Sblc1377Jo9PP/riVfownZkgrt6fBAmnH7AsJzcx9DtRSjH7ndaNtUpw3WxKFHlBD4byNJt1Vebo5BOrZ681LaBFRXvabFwREFtMRuOwQYaIwcgNZI63sdZ3ewZ3saSMDCXl4tZH5V1b3SRloj+thIMaX7AtXc4WPNmf4867X3zUxH+BTat4kYXFPGOQX4Gc+h5Mf6t/enykTqVQDN7ile/7kgg3BhSRyZEpoRzFFG21eHu1/D+Eqky6y8J/S5slifvDvTYMCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAh8cssPgdm7WKC0w0XEsyjFQFaYviXeWRbO69NYbwsim4RL2L2ybaiApyNvYf8rnLRB1Si5Xjsq5pc+ZNqK0g7dk606W0ScJzCWgVrinCxHKLdSzPcgwP7kOdWTN30yxlKUDwab8+q4hlawhVdJ/0kE4Puzr0DUzQaY7yqgPrzZRQKcKYh0AQq9IzcjN+dkxIgGjcffp5J84Bw+JLSAJemqPrkNKv5AEJWXhypupd2FMp/GvoldYiOUSYd9TKe28Wzo+Y35pmq34fUKsutJqwdWTdBxMpaMl8+oFqxCgH+LPaQfoJgRZgzHD7eFiR475GRTs07OGGIfMF8JvQktfUPg==</dsig:X509Certificate>
                             </dsig:X509Data>
                           </dsig:KeyInfo>
                         </KeyDescriptor>
 
 			<SingleLogoutService
 					Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
-					Location="http://localhost:8080/auth/realms/master/protocol/saml" />
+					Location="http://keycloak.localhost:8080/auth/realms/shibboleth-realm/protocol/saml" />
 			<SingleLogoutService
 					Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
-					Location="http://localhost:8080/auth/realms/master/protocol/saml" />
+					Location="http://keycloak.localhost:8080/auth/realms/shibboleth-realm/protocol/saml" />
 			<NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</NameIDFormat>
 			<NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
 			<NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</NameIDFormat>
 			<NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</NameIDFormat>
 			<SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
-				Location="http://localhost:8080/auth/realms/master/protocol/saml" />
+				Location="http://keycloak.localhost:8080/auth/realms/shibboleth-realm/protocol/saml" />
 			<SingleSignOnService
 				Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
-				Location="http://localhost:8080/auth/realms/master/protocol/saml" />
+				Location="http://keycloak.localhost:8080/auth/realms/shibboleth-realm/protocol/saml" />
 			<SingleSignOnService
 				Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP"
-				Location="http://localhost:8080/auth/realms/master/protocol/saml" />
+				Location="http://keycloak.localhost:8080/auth/realms/shibboleth-realm/protocol/saml" />
 		</IDPSSODescriptor>
 	</EntityDescriptor>
 </EntitiesDescriptor>

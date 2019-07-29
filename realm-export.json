@@ -107,12 +107,11 @@
     "client": {
       "shibboleth-sp": [
         {
-          "id": "ed4e1923-c0a7-40f6-8e09-103853d5f1e5",
-          "name": "Shibboleth",
-          "description": "Shibboleth custom role",
+          "id": "ec7dd7f8-33a0-4ea8-afff-e73231147b5a",
+          "name": "custom-rile",
           "composite": false,
           "clientRole": true,
-          "containerId": "4b95a6a7-02ab-40d7-bed8-0e210a74090e",
+          "containerId": "bb31bd45-c472-4277-8b9d-37f86e9e3227",
           "attributes": {}
         }
       ],
@@ -598,69 +597,6 @@
   ],
   "clients": [
     {
-      "id": "4b95a6a7-02ab-40d7-bed8-0e210a74090e",
-      "clientId": "shibboleth-sp",
-      "rootUrl": "http://keycloak:8080",
-      "baseUrl": "/",
-      "surrogateAuthRequired": false,
-      "enabled": true,
-      "clientAuthenticatorType": "client-secret",
-      "secret": "**********",
-      "redirectUris": [
-        "/saml/*"
-      ],
-      "webOrigins": [],
-      "notBefore": 0,
-      "bearerOnly": false,
-      "consentRequired": false,
-      "standardFlowEnabled": true,
-      "implicitFlowEnabled": false,
-      "directAccessGrantsEnabled": false,
-      "serviceAccountsEnabled": false,
-      "publicClient": false,
-      "frontchannelLogout": true,
-      "protocol": "saml",
-      "attributes": {
-        "saml.assertion.signature": "true",
-        "saml.force.post.binding": "true",
-        "saml.multivalued.roles": "false",
-        "saml_single_logout_service_url_post": "/saml/logout",
-        "saml.encrypt": "false",
-        "login_theme": "keycloak",
-        "saml_assertion_consumer_url_post": "/saml/SSO",
-        "saml.server.signature": "true",
-        "saml.server.signature.keyinfo.ext": "false",
-        "exclude.session.state.from.auth.response": "false",
-        "saml.signing.certificate": "MIICqTCCAZECBgFsEG1WbjANBgkqhkiG9w0BAQsFADAYMRYwFAYDVQQDDA1zaGliYm9sZXRoLXNwMB4XDTE5MDcyMDE3MjYzNloXDTI5MDcyMDE3MjgxNlowGDEWMBQGA1UEAwwNc2hpYmJvbGV0aC1zcDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANkPW8LPwiXc1q13SyM9ZK5WEDsudVjsjDAiAfsRXHj/HVumJ2zOQYkqneGMZo+zOY4aAFKrvzPrZ3hduvzvkcVdkNM63DdjODw4dPeCpgdHTIWOofAF4KqDs6F5Gd9AsIL2yGQFKlgmBnVKLWM9TsEai5VSUEaxMmvrTrqRLN3/L6ZL9erIwzkdzAoXF9x8LQgr+xyhCiK3eFTPR3yFuwxFhjgSl0j9H8MxYrEgfqXS66bxGExzzzAkclsya9gkC2Dcxwibu0OeROyWF4r3zEWmA8uJXKmf+3tPYv1gn9G2QVy5VZ6b3EOb4IteiyMi42D0ziEPJdb6/h1XMgYgnXcCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAPrqjbDhH0qZZF3RjskQRKHmmNTuZv3cNIy6I+10bHbN5I2aJoPp308L4DPH9MvgW6d+YSS2mRa0lu8p1zPR8sRGhbuR5iEHDuv9wpEAokR0fg3NSHal7vkoQNpj+zPNsASh73hDH65AWdMkRgr5ZmBk2r8r47eaZ/Bw+zOnzm3BUbKxxz15dxRmoAygEzRe169n/Y3k8M9SwvDXZTxojL/gCo3K4/f5wEkW+d1RrOO9733LnCcJijqQtCL9K18f19djlJTmibksKkqpbGxh+gWJhfSTaKRmXlxwjoXJSHRBV4Bz5nj3BafSoifoE/C4aB8AXp8fRWE9GBtB+Z3y79A==",
-        "saml.signature.algorithm": "RSA_SHA256",
-        "saml_force_name_id_format": "false",
-        "saml.client.signature": "true",
-        "tls.client.certificate.bound.access.tokens": "false",
-        "saml.authnstatement": "true",
-        "display.on.consent.screen": "false",
-        "saml_name_id_format": "username",
-        "saml.signing.private.key": "MIIEowIBAAKCAQEA2Q9bws/CJdzWrXdLIz1krlYQOy51WOyMMCIB+xFceP8dW6YnbM5BiSqd4Yxmj7M5jhoAUqu/M+tneF26/O+RxV2Q0zrcN2M4PDh094KmB0dMhY6h8AXgqoOzoXkZ30CwgvbIZAUqWCYGdUotYz1OwRqLlVJQRrEya+tOupEs3f8vpkv16sjDOR3MChcX3HwtCCv7HKEKIrd4VM9HfIW7DEWGOBKXSP0fwzFisSB+pdLrpvEYTHPPMCRyWzJr2CQLYNzHCJu7Q55E7JYXivfMRaYDy4lcqZ/7e09i/WCf0bZBXLlVnpvcQ5vgi16LIyLjYPTOIQ8l1vr+HVcyBiCddwIDAQABAoIBAEPoCSYWRz//Ke5U7t3UfCYKaMOLEk1Cm80HJqV8VfjIn0+n2Jeyo1AdVA1XFlMImA371nQGpSfCErnWYQR2kp0zW3ap6HEvik1UwEsaxYRrauYxrDniLNpLn6v5rf1pSI+AU0rvTsMLCmQxU6fDa1sASgDqIpErKIIYuKWne2jrtEqGsIxF2Yp38264eiKzd7LUyccd4TChlP5TIIvBq4T6N3/6cI6zPcDdjIiI+COi/3Mdx4i+o/qhir9MH0NRF2JsghMl4dniW/4zWielsCfGznWSXxzcB7F2bC4Uon0XkIopAyuibp0QXu1jPV55h0+nQddAFdnFgqwzjuRK1QECgYEA9Qf+NA/8Hg/zrGaqBIiKs31dSvGcnuW8Y5HKgJnI+mINmJG5/uJzB+IU439TW7xtsnlHYYZwU8tPQQMCQqO5Do3SYlQwohm8k7V6055ZwhBI/N31kq/8VI3nARWLpEm4yMroJGkDlHgMrVWYOZDebTxIAHk3vo8NxD2oKvynNIECgYEA4sbSK4yIRjakrLi3Pnb4rJf5WFr3urR/2WRizETDFFziNMR5ufYLFItUMRsu1KrAZRcSrOpe3s3IjV4+1mRsDXlntRTPheT4B/xeP4d7nlYW8LkmmmAvUDTDf0D78bVJ4JTLXqARV2V8mJYzqVBa8F3A+Xmeh08tL6nw8JbOdfcCgYEAmFpw75Qk0dhfTYnEGu9/Nl0znb6fAJmdyldDDzUPpsdC5uNtP5MzrOogzNdFUFvX5UnNXVFHFILsc2LYi/Daxrbd4i+w0YmpHDqR9XSXILgZecjUwXFVNonI4X6xBeSk1Yx8TO9Sv4TpdPksnlZ6Rndd2ZWFWKIAEE25+4h+uoECgYAgNxpYMWiSgOS33K27Y+9DpXs4gAO9NDMNUONwHTyRQfiogljAgCFm07wsFa57a55VPgfbJJhBkn4xBvhqQG3RJDQFV2V7oeFSURmacMaw4Y30uHixaYSPIk+7XiHsXlKWYszZLmgIQFSI4J2KKe4hQ1BMoGhS1H6YzM17gBDoVQKBgCmYDBRxDRcl9m3x099kb2GL+Ouev8pXjQezYAQf0DdAFI6zE8OCjbM97xQXbYu+DLdTks88tyI3ZNTTK8zwW7CLchJ6vQ5Vdm+r9ve1Q45MxpUr8G/VJwtBGg5WsX/OZYGxqvcW+g8ipTOYghUB6nQ+AKtEb3QN+x842L79vR5I",
-        "saml.onetimeuse.condition": "false",
-        "saml_signature_canonicalization_method": "http://www.w3.org/2001/10/xml-exc-c14n#"
-      },
-      "authenticationFlowBindingOverrides": {},
-      "fullScopeAllowed": true,
-      "nodeReRegistrationTimeout": -1,
-      "defaultClientScopes": [
-        "web-origins",
-        "role_list",
-        "profile",
-        "roles",
-        "email"
-      ],
-      "optionalClientScopes": [
-        "address",
-        "phone",
-        "offline_access",
-        "microprofile-jwt"
-      ]
-    },
-    {
       "id": "61f52bee-9576-45c5-bbd7-bcbc309a22d0",
       "clientId": "broker",
       "name": "${client_broker}",
@@ -852,6 +788,73 @@
       "authenticationFlowBindingOverrides": {},
       "fullScopeAllowed": false,
       "nodeReRegistrationTimeout": 0,
+      "defaultClientScopes": [
+        "web-origins",
+        "role_list",
+        "profile",
+        "roles",
+        "email"
+      ],
+      "optionalClientScopes": [
+        "address",
+        "phone",
+        "offline_access",
+        "microprofile-jwt"
+      ]
+    },
+    {
+      "id": "bb31bd45-c472-4277-8b9d-37f86e9e3227",
+      "clientId": "shibboleth-sp",
+      "name": "Simple Apache App",
+      "description": "Simple Apache App via Shibboleth Service Provider",
+      "surrogateAuthRequired": false,
+      "enabled": true,
+      "clientAuthenticatorType": "client-secret",
+      "secret": "**********",
+      "redirectUris": [
+        "https://shibboleth.localhost/Shibboleth.sso/SAML2/ECP",
+        "https://shibboleth.localhost/Shibboleth.sso/SAML2/POST"
+      ],
+      "webOrigins": [
+        "https://shibboleth.localhost"
+      ],
+      "notBefore": 0,
+      "bearerOnly": false,
+      "consentRequired": false,
+      "standardFlowEnabled": true,
+      "implicitFlowEnabled": false,
+      "directAccessGrantsEnabled": false,
+      "serviceAccountsEnabled": false,
+      "publicClient": false,
+      "frontchannelLogout": true,
+      "protocol": "saml",
+      "attributes": {
+        "saml.assertion.signature": "false",
+        "saml_single_logout_service_url_post": "https://shibboleth.localhost/Shibboleth.sso/SLO/POST",
+        "saml.force.post.binding": "true",
+        "saml.multivalued.roles": "false",
+        "saml.encrypt": "false",
+        "login_theme": "keycloak",
+        "saml_assertion_consumer_url_post": "https://shibboleth.localhost/Shibboleth.sso/SAML2/POST",
+        "saml.server.signature": "true",
+        "saml.server.signature.keyinfo.ext": "false",
+        "exclude.session.state.from.auth.response": "false",
+        "saml.signing.certificate": "MIICqTCCAZECBgFsOgL79DANBgkqhkiG9w0BAQsFADAYMRYwFAYDVQQDDA1zaGliYm9sZXRoLXNwMB4XDTE5MDcyODE5MTQyOVoXDTI5MDcyODE5MTYwOVowGDEWMBQGA1UEAwwNc2hpYmJvbGV0aC1zcDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJoClZ0nViiMxOoK96lS2Gytj3F9aa6ju+1ZkSCQq1DUb902oRUhqfpTFI2+hGjIpHqmccPxDYExEusCdPFs9qmu9hsJ1Tc+FDk0lpBkMntq2hXt5SaG2ZRcWRr7TY96t70awjv74gMYMCAcRHkzq29066tDu3tjjvISJ8QIZ6oB2TeTVEnt2ez38b4Lhj0g7azBWTz50wQXWXpxS8fgR/sUONBWtnPsRunI6+RsJGAt3FZQHGFLnTJnUBpJg9ChX7eAULOOeyPnMd36+4vje8DkmkpW0zkzwM+OzcxCdrxrsfnnjWFF5ch0y9eONEvJ/6u39DorfbEHjUZhU1RfUyUCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAjwEWJg6FNlkFr/OqnOXXUw+v2HE06H9VxsAEW9OtAE4c3FH86M/TRGHyA9QZ/rBn26lVwOpOj5Wof1n4Wb+FvtMAoEY+OrOuBvCUZteDZgFlAtxgOGTbX3hQvnHy6eHyRiVVXOezuSl5lq6gkCzlHPwLnY7EeF83+PfWO6vA01dNmrVyRI8lgV+zxWgb71bGyMJ2UeMd/rbMs0lbDdMa+3K1ZZ0vc7cNbA4PcPeQQPGdqydQatUSvreN31oZu9ftsB40KzTA6JndbCYu4VxbywRDcKwslQijtwwahQ63cYrrjCtsEbXw35/Kx4oNKO13faKym+2Jo/m4k5FDUBMoaw==",
+        "saml_single_logout_service_url_redirect": "https://shibboleth.localhost/Shibboleth.sso/SLO/Redirect",
+        "saml.signature.algorithm": "RSA_SHA256",
+        "saml_force_name_id_format": "false",
+        "saml.client.signature": "true",
+        "tls.client.certificate.bound.access.tokens": "false",
+        "saml.authnstatement": "true",
+        "display.on.consent.screen": "false",
+        "saml_name_id_format": "username",
+        "saml.signing.private.key": "MIIEpAIBAAKCAQEAmgKVnSdWKIzE6gr3qVLYbK2PcX1prqO77VmRIJCrUNRv3TahFSGp+lMUjb6EaMikeqZxw/ENgTES6wJ08Wz2qa72GwnVNz4UOTSWkGQye2raFe3lJobZlFxZGvtNj3q3vRrCO/viAxgwIBxEeTOrb3Trq0O7e2OO8hInxAhnqgHZN5NUSe3Z7PfxvguGPSDtrMFZPPnTBBdZenFLx+BH+xQ40Fa2c+xG6cjr5GwkYC3cVlAcYUudMmdQGkmD0KFft4BQs457I+cx3fr7i+N7wOSaSlbTOTPAz47NzEJ2vGux+eeNYUXlyHTL1440S8n/q7f0Oit9sQeNRmFTVF9TJQIDAQABAoIBABW3UZNkTZDQMJ/zxfI5PU0tt/E/xtwaOFCCdaVK4O0310IxBsutAIPMnTRTbeY8jHzC5X3Eiqvx2IIMyaKVQ76vbgJoA4mTllRupuBbUIb4jSHUdqBVGW8DCol0b/5QRoJCuKqunLLlATw14C3a7Ex+BxESLuh6JFjb2IGa0cs12XsxeXDVjRuNt+iZM/cx4i1U933XU/F3bkyDFElSQ+SIHCzC4KK/yd+pJpIUzF1oHE1uRZQLTQ7shrEEpmAXrfydWckVzUZzrGlynf5JUO4rpKFqQyU//ejAxAVpAa1f6bfT7CAy+kPyoD/xLpPHmR2d5fkcg1e7G1LD5CKTkSECgYEAzglx5eeyw7r4Z3TDWECWH7Fuy1LQTNS79qwDCx6za3FKFsJ78tigIotGSN+LxlzdwnAU/vm5zUg7Q3lx/jqgMG/Y6O1u4ydaRZURkGHFyI8g39zvCm9ZapWX9lWpLykw8O+8uTTvZOWJ56faRhFbdM1Ut0xWMmk8IbbOefkrChkCgYEAv1texmLscMeuKi1TsDSd03X8WUHfrMfLT6NCbr82FJ0ubLddkJ3Ofk6i0iKCDhzlns0zFLJ7F9or5M31wx7hvXEPXLx3dNpBjEOeqim4OCA2gXgaAezBH347hdGZ4vnvO++OFq8QUeCJwq2ZbrbPzy1sQLJCUaxJjHmgkIpyCu0CgYEAxvdn/lTZ1Rphd8bSPg9g6go2rDK05P0q5vMFnV9wdHlays/VUpbPTYyhuw3ltRFJNdN28yPFwe/XCznkU1XaC+x207k2NDZ0fm2OIJfKn/tYC9cXIESXXM5JiaD/WIO2t3VMEq6D4DOqEQOPTcrFPu5quPgG5XeqkgQvMKrmXUECgYEAs8wcTvdgBc/5G3QfcC7gJHJ1u0Aj9Gp948QYhYpwPAo8NrZL2bgM76zfW+ZEoRIRxpYz6ryQ4CaEm6XRx5ZasO9sacxDya3RbQOUL3qnt0S9MgUxGqHkC71GHESG/Tety3kY3sN66BO8HQmUYuyucZHSZy+XFLp3GOCnN2h+IzkCgYBEEkHcJdi+v2GHYax+AifMqeLz6YiZVMqyNeTuTX9PAxKPFGNgIf6W16QjtCXZRHxhL95ZBf0tHrghfmRODg8h4oAJnfxr8nnSYABXs3yFEZ4ll1UQ/a07kFXitJX1wcbnZ7r9OKtPzQquYPH2MY3S/wOGFkh73m+loYulCof59A==",
+        "saml_signature_canonicalization_method": "http://www.w3.org/2001/10/xml-exc-c14n#",
+        "saml.onetimeuse.condition": "false"
+      },
+      "authenticationFlowBindingOverrides": {},
+      "fullScopeAllowed": true,
+      "nodeReRegistrationTimeout": -1,
       "defaultClientScopes": [
         "web-origins",
         "role_list",
@@ -1467,14 +1470,14 @@
         "subComponents": {},
         "config": {
           "allowed-protocol-mapper-types": [
-            "oidc-address-mapper",
+            "saml-user-attribute-mapper",
             "oidc-usermodel-property-mapper",
             "saml-role-list-mapper",
+            "oidc-address-mapper",
+            "saml-user-property-mapper",
             "oidc-full-name-mapper",
             "oidc-sha256-pairwise-sub-mapper",
-            "saml-user-attribute-mapper",
-            "oidc-usermodel-attribute-mapper",
-            "saml-user-property-mapper"
+            "oidc-usermodel-attribute-mapper"
           ]
         }
       },
@@ -1486,14 +1489,14 @@
         "subComponents": {},
         "config": {
           "allowed-protocol-mapper-types": [
-            "oidc-full-name-mapper",
-            "saml-user-property-mapper",
-            "saml-user-attribute-mapper",
             "saml-role-list-mapper",
             "oidc-sha256-pairwise-sub-mapper",
-            "oidc-address-mapper",
             "oidc-usermodel-property-mapper",
-            "oidc-usermodel-attribute-mapper"
+            "saml-user-attribute-mapper",
+            "oidc-full-name-mapper",
+            "oidc-usermodel-attribute-mapper",
+            "saml-user-property-mapper",
+            "oidc-address-mapper"
           ]
         }
       },
@@ -1595,7 +1598,7 @@
   "defaultLocale": "de",
   "authenticationFlows": [
     {
-      "id": "976359a3-3bbc-4941-9c16-575f335d9b2c",
+      "id": "7117a96c-e219-491c-9a58-777fcbba2400",
       "alias": "Handle Existing Account",
       "description": "Handle what to do if there is existing account with same email/username like authenticated identity provider",
       "providerId": "basic-flow",
@@ -1626,7 +1629,7 @@
       ]
     },
     {
-      "id": "0ddec705-d9fa-4ccc-9d45-fec66f80dee7",
+      "id": "b668a81e-c7b1-4012-9e23-271b6c5b1d84",
       "alias": "Verify Existing Account by Re-authentication",
       "description": "Reauthentication of existing account",
       "providerId": "basic-flow",
@@ -1650,7 +1653,7 @@
       ]
     },
     {
-      "id": "0f78fecc-c074-4766-9318-d155cc4ff95f",
+      "id": "8111e767-986d-4c2b-bd42-8f4df6750669",
       "alias": "browser",
       "description": "browser based authentication",
       "providerId": "basic-flow",
@@ -1688,7 +1691,7 @@
       ]
     },
     {
-      "id": "d9509564-15e2-41f3-a9d2-f76dfc852b9f",
+      "id": "01cd6e3f-4d9a-464d-bd48-0d38fb3de83e",
       "alias": "clients",
       "description": "Base authentication for clients",
       "providerId": "client-flow",
@@ -1726,7 +1729,7 @@
       ]
     },
     {
-      "id": "9e8c914b-904b-4971-957e-1e90c286930f",
+      "id": "064d0e0f-384a-4233-8509-f1b6a18d9c18",
       "alias": "direct grant",
       "description": "OpenID Connect Resource Owner Grant",
       "providerId": "basic-flow",
@@ -1757,7 +1760,7 @@
       ]
     },
     {
-      "id": "9bee2890-fb8d-4292-881d-f1ff436246c0",
+      "id": "5f50ba34-41d4-4169-91c8-0e630a72edc8",
       "alias": "docker auth",
       "description": "Used by Docker clients to authenticate against the IDP",
       "providerId": "basic-flow",
@@ -1774,7 +1777,7 @@
       ]
     },
     {
-      "id": "1fbcb5ae-8467-4683-8d73-1fbe12776a90",
+      "id": "63170d56-f4b3-4860-82d2-778ce29bd596",
       "alias": "first broker login",
       "description": "Actions taken after first broker login with identity provider account, which is not yet linked to any Keycloak account",
       "providerId": "basic-flow",
@@ -1807,7 +1810,7 @@
       ]
     },
     {
-      "id": "e690d778-325d-44b2-85c8-9b65af3fb2ad",
+      "id": "c6799986-4444-49a7-b0b5-02466d394ee9",
       "alias": "forms",
       "description": "Username, password, otp and other auth forms.",
       "providerId": "basic-flow",
@@ -1831,7 +1834,7 @@
       ]
     },
     {
-      "id": "4e1c7895-183f-43ed-bbbd-c2bddd30e642",
+      "id": "fcd16c26-2bfb-4534-a674-83dc061d28f7",
       "alias": "http challenge",
       "description": "An authentication flow based on challenge-response HTTP Authentication Schemes",
       "providerId": "basic-flow",
@@ -1869,7 +1872,7 @@
       ]
     },
     {
-      "id": "ff7bcdd2-87f6-4563-8ad4-1b689c396e9c",
+      "id": "60acbfcd-70bf-47da-b822-017bd951dc6a",
       "alias": "registration",
       "description": "registration flow",
       "providerId": "basic-flow",
@@ -1887,7 +1890,7 @@
       ]
     },
     {
-      "id": "70f57f31-f5f7-4215-80ca-9fb49c898998",
+      "id": "ba934ce8-ed79-40e5-83d4-676448240a9c",
       "alias": "registration form",
       "description": "registration form",
       "providerId": "form-flow",
@@ -1925,7 +1928,7 @@
       ]
     },
     {
-      "id": "010f0eee-9774-4c39-a334-191e35753eb0",
+      "id": "18be6608-de04-4be4-81a0-addec16b87df",
       "alias": "reset credentials",
       "description": "Reset credentials for a user if they forgot their password or something",
       "providerId": "basic-flow",
@@ -1963,7 +1966,7 @@
       ]
     },
     {
-      "id": "532505f8-ec81-4daa-abfb-c659b029d62c",
+      "id": "8e8a2796-e380-4760-b871-86b613e7679e",
       "alias": "saml ecp",
       "description": "SAML ECP Profile Authentication Flow",
       "providerId": "basic-flow",
@@ -1982,14 +1985,14 @@
   ],
   "authenticatorConfig": [
     {
-      "id": "aa413acf-c2b5-4c8b-b4f1-fe822674c79f",
+      "id": "b65b7fc4-0cf1-4dd5-b331-214d30287b8b",
       "alias": "create unique user config",
       "config": {
         "require.password.update.after.registration": "false"
       }
     },
     {
-      "id": "d6fbcb9a-defa-4593-87f7-7c07dc3e3764",
+      "id": "3170eb28-02ba-46a7-a947-4febfcf3dbbb",
       "alias": "review profile config",
       "config": {
         "update.profile.on.first.login": "missing"

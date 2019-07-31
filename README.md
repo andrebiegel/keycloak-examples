@@ -12,7 +12,7 @@ Within Authentication SAML is a mature variant to choose from. Shibboleth instal
 
 ![Shibboleth SP](/images/shibbo-sp.png "Shibboleth SP")
 
- The scenario is based upon a docker compose setup. Its depends upon RFC 6761 (https://tools.ietf.org/html/rfc6761), which Chrome follows. Therefore the hostnamesare set to *.localhost domains, which will automatically be resolved against the local loop back device. This eliminates rthe need of declaring the services as entries in /etc/hosts
+ The scenario is based upon a docker compose setup. It depends upon RFC 6761 (https://tools.ietf.org/html/rfc6761), which Chrome follows. Therefore the hostnames are set to *.localhost domains, which will automatically be resolved against the local loop back device. This eliminates the need of declaring the services as entries in /etc/hosts
 
 
 Extracted keys and certs with : https://serverfault.com/questions/715827/how-to-generate-key-and-crt-file-from-jks-file-for-httpd-apache-server 

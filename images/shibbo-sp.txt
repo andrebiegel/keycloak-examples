@@ -1,0 +1,12 @@
+@startuml
+interface "SAML POST Binding" as POST
+node "Jboss Wildfly" {
+  POST - [Keycloak <SAML IDP> ]
+}
+ 
+node "Apache HTTPD" {
+  
+  [Shibboleth <SAML SP>] --> POST
+} 
+
+@enduml

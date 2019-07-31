@@ -13,9 +13,10 @@ services:
       retries: 5  
   keycloak:
     hostname: keycloak.localhost
-    image: jboss/keycloak:6.0.1
+    build: 
+      context: ./keycloak-idp
     environment:
-      #- KEYCLOAK_HOSTNAME=keycloak.localhost
+      - KEYCLOAK_HOSTNAME=keycloak.localhost
       - KEYCLOAK_USER=admin
       - KEYCLOAK_PASSWORD=password
       - DB_VENDOR=postgres
@@ -27,8 +28,6 @@ services:
       - KEYCLOAK_IMPORT=/tmp/realm-export.json
     ports:
      - 8080:8080 
-    volumes:
-     - ./realm-export.json:/tmp/realm-export.json 
     healthcheck:
       test: curl -f http://localhost:8080/auth/realms/master || exit 1
       interval: 30s

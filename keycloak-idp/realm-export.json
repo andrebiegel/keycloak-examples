@@ -812,8 +812,8 @@
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
       "redirectUris": [
-        "https://shibboleth.localhost/Shibboleth.sso/SAML2/ECP",
-        "https://shibboleth.localhost/Shibboleth.sso/SAML2/POST"
+        "http://shibboleth.localhost/Shibboleth.sso/SAML2/ECP",
+        "http://shibboleth.localhost/Shibboleth.sso/SAML2/POST"
       ],
       "webOrigins": [
         "https://shibboleth.localhost"
@@ -830,17 +830,17 @@
       "protocol": "saml",
       "attributes": {
         "saml.assertion.signature": "false",
-        "saml_single_logout_service_url_post": "https://shibboleth.localhost/Shibboleth.sso/SLO/POST",
         "saml.force.post.binding": "true",
+        "saml_single_logout_service_url_post": "http://shibboleth.localhost/Shibboleth.sso/SLO/POST",
         "saml.multivalued.roles": "false",
         "saml.encrypt": "false",
         "login_theme": "keycloak",
-        "saml_assertion_consumer_url_post": "https://shibboleth.localhost/Shibboleth.sso/SAML2/POST",
+        "saml_assertion_consumer_url_post": "http://shibboleth.localhost/Shibboleth.sso/SAML2/POST",
         "saml.server.signature": "true",
         "saml.server.signature.keyinfo.ext": "false",
         "exclude.session.state.from.auth.response": "false",
         "saml.signing.certificate": "MIICqTCCAZECBgFsOgL79DANBgkqhkiG9w0BAQsFADAYMRYwFAYDVQQDDA1zaGliYm9sZXRoLXNwMB4XDTE5MDcyODE5MTQyOVoXDTI5MDcyODE5MTYwOVowGDEWMBQGA1UEAwwNc2hpYmJvbGV0aC1zcDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJoClZ0nViiMxOoK96lS2Gytj3F9aa6ju+1ZkSCQq1DUb902oRUhqfpTFI2+hGjIpHqmccPxDYExEusCdPFs9qmu9hsJ1Tc+FDk0lpBkMntq2hXt5SaG2ZRcWRr7TY96t70awjv74gMYMCAcRHkzq29066tDu3tjjvISJ8QIZ6oB2TeTVEnt2ez38b4Lhj0g7azBWTz50wQXWXpxS8fgR/sUONBWtnPsRunI6+RsJGAt3FZQHGFLnTJnUBpJg9ChX7eAULOOeyPnMd36+4vje8DkmkpW0zkzwM+OzcxCdrxrsfnnjWFF5ch0y9eONEvJ/6u39DorfbEHjUZhU1RfUyUCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAjwEWJg6FNlkFr/OqnOXXUw+v2HE06H9VxsAEW9OtAE4c3FH86M/TRGHyA9QZ/rBn26lVwOpOj5Wof1n4Wb+FvtMAoEY+OrOuBvCUZteDZgFlAtxgOGTbX3hQvnHy6eHyRiVVXOezuSl5lq6gkCzlHPwLnY7EeF83+PfWO6vA01dNmrVyRI8lgV+zxWgb71bGyMJ2UeMd/rbMs0lbDdMa+3K1ZZ0vc7cNbA4PcPeQQPGdqydQatUSvreN31oZu9ftsB40KzTA6JndbCYu4VxbywRDcKwslQijtwwahQ63cYrrjCtsEbXw35/Kx4oNKO13faKym+2Jo/m4k5FDUBMoaw==",
-        "saml_single_logout_service_url_redirect": "https://shibboleth.localhost/Shibboleth.sso/SLO/Redirect",
+        "saml_single_logout_service_url_redirect": "http://shibboleth.localhost/Shibboleth.sso/SLO/Redirect",
         "saml.signature.algorithm": "RSA_SHA256",
         "saml_force_name_id_format": "false",
         "saml.client.signature": "true",
@@ -855,6 +855,34 @@
       "authenticationFlowBindingOverrides": {},
       "fullScopeAllowed": true,
       "nodeReRegistrationTimeout": -1,
+      "protocolMappers": [
+        {
+          "id": "654b6e67-942d-460f-8a26-489a68ba7945",
+          "name": "X500 email",
+          "protocol": "saml",
+          "protocolMapper": "saml-user-property-mapper",
+          "consentRequired": false,
+          "config": {
+            "attribute.nameformat": "urn:oasis:names:tc:SAML:2.0:attrname-format:uri",
+            "user.attribute": "email",
+            "friendly.name": "email",
+            "attribute.name": "urn:oid:1.2.840.113549.1.9.1"
+          }
+        },
+        {
+          "id": "d811d2d0-6875-4f26-ba9f-2ccc4b63b90d",
+          "name": "Simple Apache App",
+          "protocol": "saml",
+          "protocolMapper": "saml-user-attribute-mapper",
+          "consentRequired": false,
+          "config": {
+            "attribute.nameformat": "Basic",
+            "user.attribute": "username",
+            "friendly.name": "username",
+            "attribute.name": "uid"
+          }
+        }
+      ],
       "defaultClientScopes": [
         "web-origins",
         "role_list",

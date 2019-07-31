@@ -1,4 +1,4 @@
-# Jboss Keycloak Playground
+# JBoss Keycloak Playground
 
 This repository contains the following comomn scenarios with Jboss Keycloak.
 
@@ -25,7 +25,15 @@ Within Authentication SAML is a mature variant to choose from. Shibboleth instal
  * Create a SAML Client in Keycloak
 
 
-Extracted keys and certs with : https://serverfault.com/questions/715827/how-to-generate-key-and-crt-file-from-jks-file-for-httpd-apache-server 
+
+Keycloak directly creates keystores for the client. The keys and certs have been extracted with : https://serverfault.com/questions/715827/how-to-generate-key-and-crt-file-from-jks-file-for-httpd-apache-server 
+
+```bash
+keytool -export -alias shibboleth-sp -file mydomain.der -keystore keystore.jks
+openssl x509 -inform der -in mydomain.der -out certificate.pem
+keytool -importkeystore -srckeystore keystore.jks -destkeystore keystore.p12 -deststoretype PKCS12
+openssl pkcs12 -in keystore.p12  -nodes -nocerts -out shibboleth-sp.key
+```
 
 
 ### Single Sign On

@@ -1,0 +1,3 @@
+kcadm.sh config credentials --server http://localhost:9990/auth --realm shibboleth-realm --user admin --password password  -x
+kcadm.sh create users -r shibboleth-realm -s username=test -s enabled=true -s email=test@example.com 
+kcadm.sh set-password -r shibboleth-realm --username test --new-password test

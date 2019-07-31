@@ -16,7 +16,7 @@ services:
     build: 
       context: ./keycloak-idp
     environment:
-      - KEYCLOAK_HOSTNAME=keycloak.localhost
+      #- KEYCLOAK_HOSTNAME=keycloak.localhost
       - KEYCLOAK_USER=admin
       - KEYCLOAK_PASSWORD=password
       - DB_VENDOR=postgres

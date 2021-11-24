@@ -1,6 +1,6 @@
 # JBoss Keycloak Playground
 
-This repository contains the following comomn scenarios with Jboss Keycloak.
+This repository contains the following common scenarios with Jboss Keycloak.
 
 *  direct Shibboleth Service Provider inside of an Apache Httpd 2.4
 *  Shibboleth Service Provider inside of an Apache Httpd 2.4 as an Authentication Proxy (planned)
